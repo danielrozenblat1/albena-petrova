@@ -1,0 +1,278 @@
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #124249;
+  text-align: center;
+  letter-spacing: -0.02em;
+  direction: rtl;
+  font-family: 'Assistant';
+  margin: 2% auto;
+  text-shadow: 0 1px 2px rgba(18, 66, 73, 0.15);
+}
+
+.description {
+  font-size: 1.4rem;
+  direction: rtl;
+  color: #124249;
+  text-align: center;
+  margin: 2% auto;
+  font-family: 'AssistantR';
+  text-shadow: 0 1px 2px rgba(18, 66, 73, 0.15);
+}
+
+.imageContainer {
+  display: flex;
+  width: 30%;
+  margin: 2% auto;
+}
+
+.image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.specialUnderline {
+  position: relative;
+  display: inline-block;
+}
+
+.specialUnderline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(18, 66, 73, 0.3) 15%,
+    rgba(18, 66, 73, 0.8) 50%,
+    rgba(18, 66, 73, 0.3) 85%,
+    transparent 100%
+  );
+  border-radius: 1px;
+  filter: blur(0.5px);
+  animation: subtleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes subtleGlow {
+  0% {
+    opacity: 0.7;
+    filter: blur(0.5px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0.3px);
+  }
+}
+
+/* מתחת ל-350px */
+@media (max-width: 349px) {
+  .title {
+    font-size: 1.4rem;
+    margin: 3% auto;
+    padding: 0 10px;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+    margin: 3% auto;
+    padding: 0 15px;
+  }
+  
+  .imageContainer {
+    width: 85%;
+    margin: 4% auto;
+  }
+  
+  .specialUnderline::after {
+    height: 1px;
+  }
+}
+
+/* 350px - 450px */
+@media (min-width: 350px) and (max-width: 450px) {
+  .title {
+    font-size: 1.6rem;
+    margin: 3% auto;
+    padding: 0 10px;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    margin: 3% auto;
+    padding: 0 15px;
+  }
+  
+  .imageContainer {
+    width: 75%;
+    margin: 4% auto;
+  }
+}
+
+/* 450px - 550px */
+@media (min-width: 450px) and (max-width: 550px) {
+  .title {
+    font-size: 1.8rem;
+    margin: 2.5% auto;
+    padding: 0 10px;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    margin: 2.5% auto;
+    padding: 0 10px;
+  }
+  
+  .imageContainer {
+    width: 65%;
+    margin: 3.5% auto;
+  }
+}
+
+/* 550px - 650px */
+@media (min-width: 550px) and (max-width: 650px) {
+  .title {
+    font-size: 1.9rem;
+    margin: 2.5% auto;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    margin: 2.5% auto;
+  }
+  
+  .imageContainer {
+    width: 55%;
+    margin: 3% auto;
+  }
+}
+
+/* 650px - 750px */
+@media (min-width: 650px) and (max-width: 750px) {
+  .title {
+    font-size: 2.0rem;
+    margin: 2.3% auto;
+  }
+  
+  .description {
+    font-size: 1.25rem;
+    margin: 2.3% auto;
+  }
+  
+  .imageContainer {
+    width: 50%;
+    margin: 3% auto;
+  }
+}
+
+/* 750px - 850px */
+@media (min-width: 750px) and (max-width: 850px) {
+  .title {
+    font-size: 2.1rem;
+    margin: 2.2% auto;
+  }
+  
+  .description {
+    font-size: 1.3rem;
+    margin: 2.2% auto;
+  }
+  
+  .imageContainer {
+    width: 45%;
+    margin: 2.8% auto;
+  }
+}
+
+/* 850px - 950px */
+@media (min-width: 850px) and (max-width: 950px) {
+  .title {
+    font-size: 2.15rem;
+    margin: 2.1% auto;
+  }
+  
+  .description {
+    font-size: 1.35rem;
+    margin: 2.1% auto;
+  }
+  
+  .imageContainer {
+    width: 40%;
+    margin: 2.5% auto;
+  }
+}
+
+/* 950px - 1050px */
+@media (min-width: 950px) and (max-width: 1050px) {
+  .title {
+    font-size: 2.2rem;
+    margin: 2% auto;
+  }
+  
+  .description {
+    font-size: 1.4rem;
+    margin: 2% auto;
+  }
+  
+  .imageContainer {
+    width: 35%;
+    margin: 2.3% auto;
+  }
+}
+
+/* 1050px - 1150px */
+@media (min-width: 1050px) and (max-width: 1150px) {
+  .title {
+    font-size: 2.25rem;
+    margin: 2% auto;
+  }
+  
+  .description {
+    font-size: 1.45rem;
+    margin: 2% auto;
+  }
+  
+  .imageContainer {
+    width: 32%;
+    margin: 2.2% auto;
+  }
+}
+
+/* 1150px - 1250px */
+@media (min-width: 1150px) and (max-width: 1250px) {
+  .title {
+    font-size: 2.3rem;
+    margin: 1.8% auto;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+    margin: 1.8% auto;
+  }
+  
+  .imageContainer {
+    width: 30%;
+    margin: 2% auto;
+  }
+}
+
+/* מעל 1250px */
+@media (min-width: 1250px) {
+  .title {
+    font-size: 2rem;
+    margin: 1.5% auto;
+  }
+  
+  .description {
+    font-size: 1.4rem;
+    margin: 1.5% auto;
+    width:70%
+  }
+  
+  .imageContainer {
+    width: 28%;
+    margin: 1.8% auto;
+  }
+}

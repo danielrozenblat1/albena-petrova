@@ -1,0 +1,235 @@
+/* Base styles */
+.title {
+  font-weight: 800;
+  color: #124249;
+  text-align: center;
+  letter-spacing: -0.02em;
+  direction: rtl;
+  font-family: 'Assistant';
+  margin: 2% auto;
+    width:90%;
+  text-shadow: 0 1px 2px rgba(18, 66, 73, 0.15);
+}
+
+.description {
+  direction: rtl;
+  color: #124249;
+  text-align: center;
+  margin: 2% auto;
+  width:90%;
+  font-family: 'AssistantR';
+  text-shadow: 0 1px 2px rgba(18, 66, 73, 0.15);
+}
+
+.imageContainer {
+  display: flex;
+  margin: 2% auto;
+}
+
+.image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.specialUnderline {
+  position: relative;
+  display: inline-block;
+}
+
+.specialUnderline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(18, 66, 73, 0.3) 15%,
+    rgba(18, 66, 73, 0.8) 50%,
+    rgba(18, 66, 73, 0.3) 85%,
+    transparent 100%
+  );
+  border-radius: 1px;
+  filter: blur(0.5px);
+  animation: subtleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes subtleGlow {
+  0% {
+    opacity: 0.7;
+    filter: blur(0.5px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0.3px);
+  }
+}
+
+/* מתחת ל-350px */
+@media (max-width: 349px) {
+  .title {
+    font-size: 1.2rem;
+  }
+  
+  .description {
+    font-size: 0.8rem;
+  }
+  
+  .imageContainer {
+    width: 90%;
+  }
+}
+
+/* 350-450px */
+@media (min-width: 350px) and (max-width: 450px) {
+  .title {
+    font-size: 1.7rem;
+  }
+  
+  .description {
+    font-size:1.1rem;
+    margin:20px auto;
+  }
+  
+  .imageContainer {
+    width: 80%;
+  }
+}
+
+/* 450-550px */
+@media (min-width: 451px) and (max-width: 550px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+  }
+  
+  .imageContainer {
+    width: 70%;
+  }
+}
+
+/* 550-650px */
+@media (min-width: 551px) and (max-width: 650px) {
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+  }
+  
+  .imageContainer {
+    width: 60%;
+  }
+}
+
+/* 650-750px */
+@media (min-width: 651px) and (max-width: 750px) {
+  .title {
+    font-size: 1.9rem;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+  }
+  
+  .imageContainer {
+    width: 50%;
+  }
+}
+
+/* 750-850px */
+@media (min-width: 751px) and (max-width: 850px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .description {
+    font-size: 1.25rem;
+  }
+  
+  .imageContainer {
+    width: 45%;
+  }
+}
+
+/* 850-950px */
+@media (min-width: 851px) and (max-width: 950px) {
+  .title {
+    font-size: 2.1rem;
+  }
+  
+  .description {
+    font-size: 1.3rem;
+  }
+  
+  .imageContainer {
+    width: 40%;
+  }
+}
+
+/* 950-1050px */
+@media (min-width: 951px) and (max-width: 1050px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .description {
+    font-size: 1.4rem;
+  }
+  
+  .imageContainer {
+    width: 35%;
+  }
+}
+
+/* 1050-1150px */
+@media (min-width: 1051px) and (max-width: 1150px) {
+  .title {
+    font-size: 2.3rem;
+  }
+  
+  .description {
+    font-size: 1.45rem;
+  }
+  
+  .imageContainer {
+    width: 32%;
+  }
+}
+
+/* 1150-1250px */
+@media (min-width: 1151px) and (max-width: 1250px) {
+  .title {
+    font-size: 2.4rem;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+  }
+  
+  .imageContainer {
+    width: 30%;
+  }
+}
+
+/* מעל 1250px */
+@media (min-width: 1251px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .description {
+    font-size: 1.6rem;
+  }
+  
+  .imageContainer {
+    width: 28%;
+  }
+}

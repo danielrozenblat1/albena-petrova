@@ -1,0 +1,1249 @@
+/* Me.module.css */
+
+.aboutContainer {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+}
+
+/* אלמנטים דקורטיביים */
+.decorativeElement1 {
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(18, 66, 73, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 20s infinite ease-in-out;
+}
+
+.decorativeElement2 {
+  position: absolute;
+  bottom: -300px;
+  right: -300px;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(18, 66, 73, 0.02) 0%, transparent 60%);
+  border-radius: 50%;
+  animation: float 25s infinite ease-in-out reverse;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(30px, -30px) rotate(120deg); }
+  66% { transform: translate(-20px, 20px) rotate(240deg); }
+}
+
+.aboutContent {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+  z-index: 2;
+  min-height: calc(100vh - 160px);
+}
+
+/* תוכן בצד ימין */
+.contentSide {
+  flex: 1.3;
+  max-width: 700px;
+  animation: slideInRight 0.8s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* שם וכותרת */
+.nameSection {
+  margin-bottom: 50px;
+}
+
+.nameWrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.nameTitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 100;
+  color: #124249;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
+}
+
+.nameLine {
+  position: absolute;
+  bottom: 8px;
+  right: 0;
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, #124249 0%, rgba(18, 66, 73, 0.3) 100%);
+  border-radius: 2px;
+  animation: expandLine 1s ease-out 0.5s both;
+}
+
+.professionalTitle {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.4rem;
+  color: #124249;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.8;
+  animation: fadeIn 0.8s ease-out 0.8s both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 0.8; }
+}
+
+/* ציטוט מיוחד ויפה */
+.quoteCard {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 2px solid rgba(18, 66, 73, 0.15);
+  border-radius: 32px;
+  padding: 20px 45px;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 
+    0 20px 60px rgba(18, 66, 73, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  animation: slideUp 0.8s ease-out 0.3s both;
+  overflow: hidden;
+  text-align: center;
+}
+
+.quoteCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(18, 66, 73, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(18, 66, 73, 0.02) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.quoteMark {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  width: 50px;
+  height: 40px;
+  opacity: 0.08;
+}
+
+.quoteMark::before {
+  content: '"';
+  position: absolute;
+  font-size: 80px;
+  font-family: Georgia, serif;
+  color: #124249;
+  line-height: 1;
+  top: -10px;
+  right: 0;
+}
+
+.quote {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #124249;
+  line-height: 1.8;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(18, 66, 73, 0.05);
+}
+
+.quoteAuthor {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1rem;
+  color: #124249;
+  opacity: 0.6;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* קטע הסיפור */
+.storySection {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contentCard {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(18, 66, 73, 0.08);
+  border-radius: 24px;
+  padding: 40px;
+  transition: all 0.4s ease;
+  animation: slideUp 0.8s ease-out 0.6s both;
+}
+
+.contentCard:hover {
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 12px 48px rgba(18, 66, 73, 0.1);
+  transform: translateY(-3px);
+}
+
+.sectionTitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 2rem;
+  color: #124249;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.storyParagraph {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #124249;
+  margin-bottom: 20px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.storyParagraph:last-child {
+  margin-bottom: 0;
+}
+
+/* כרטיס הפילוסופיה */
+.philosophyCard {
+  background: linear-gradient(135deg, rgba(18, 66, 73, 0.02) 0%, rgba(255, 255, 255, 0.5) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(18, 66, 73, 0.1);
+  border-radius: 24px;
+  padding: 40px;
+  position: relative;
+  transition: all 0.4s ease;
+  animation: slideUp 0.8s ease-out 0.9s both;
+}
+
+.philosophyCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 48px rgba(18, 66, 73, 0.12);
+}
+
+.cardIcon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 8px;
+  height: 8px;
+  background: #124249;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.philosophyTitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.8rem;
+  color: #124249;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.philosophyText {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #124249;
+  margin: 0;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* קטע קריאה לפעולה */
+.ctaSection {
+  text-align: center;
+  margin-top: 20px;
+  animation: slideUp 0.8s ease-out 1.2s both;
+}
+
+.ctaText {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.3rem;
+  color: #124249;
+  margin-bottom: 25px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.whatsappButton {
+  background: linear-gradient(135deg, #124249 0%, #1a525a 100%);
+  color: white;
+  border: none;
+  padding: 18px 36px;
+  border-radius: 50px;
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 4px 20px rgba(18, 66, 73, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsappButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.8s ease;
+}
+
+.whatsappButton:hover::before {
+  left: 100%;
+}
+
+.whatsappButton:hover {
+  background: linear-gradient(135deg, #1a525a 0%, #124249 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(18, 66, 73, 0.3);
+}
+
+.buttonIcon {
+  font-size: 1.2rem;
+}
+
+/* צד חזותי - ממורכז ביחס לתוכן */
+.visualSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  animation: slideInLeft 0.8s ease-out 0.3s both;
+
+  padding: 10px 0;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.imageFrame {
+  position: relative;
+}
+
+.profileImage {
+  width: 420px;
+  height: 600px;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid rgba(18, 66, 73, 0.1);
+  box-shadow: 0 24px 80px rgba(18, 66, 73, 0.15);
+  transition: transform 0.6s ease;
+}
+
+.profileImage:hover {
+  transform: scale(1.02) rotate(1deg);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.profileImage:hover .image {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(18, 66, 73, 0.1) 0%, transparent 50%, rgba(18, 66, 73, 0.05) 100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.profileImage:hover .imageOverlay {
+  opacity: 1;
+}
+
+/* סטטיסטיקות עם מספרים עולים */
+.statsContainer {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.statItem {
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(18, 66, 73, 0.1);
+  border-radius: 24px;
+  padding: 30px 25px;
+  min-width: 130px;
+  transition: all 0.6s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 40px rgba(18, 66, 73, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.statItem::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(18, 66, 73, 0.02) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.statItem:hover::before {
+  opacity: 1;
+}
+
+.statItem:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 
+    0 20px 60px rgba(18, 66, 73, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  border-color: rgba(18, 66, 73, 0.2);
+}
+
+.statNumber {
+  font-family: 'Assistant', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 100;
+  color: #124249;
+  margin-bottom: 10px;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(18, 66, 73, 0.1);
+}
+
+.statLabel {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1rem;
+  color: #124249;
+  opacity: 0.75;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+
+/* הוספת בוקס צל מיוחד */
+.highlightBox {
+  background: linear-gradient(135deg, rgba(18, 66, 73, 0.06) 0%, rgba(18, 66, 73, 0.02) 100%);
+  border: 1.5px solid rgba(18, 66, 73, 0.12);
+  border-radius: 20px;
+  padding: 30px;
+  margin-top: 25px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: relative;
+  box-shadow: 
+    0 8px 32px rgba(18, 66, 73, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.highlightBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 70%, rgba(18, 66, 73, 0.03) 0%, transparent 60%);
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.highlightText {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #124249;
+  margin: 0;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+/* רספונסיביות - גישה מדורגת */
+
+/* 1250px ומעלה - רזולוציה רחבה */
+@media (min-width: 1250px) {
+  .aboutContent {
+    gap: 120px;
+  }
+  
+  .nameTitle {
+    font-size: 3rem;
+  }
+  
+  .profileImage {
+    width: 450px;
+    height: 650px;
+  }
+}
+
+/* 1150px - 1250px */
+@media (max-width: 1250px) and (min-width: 1150px) {
+  .aboutContent {
+    gap: 100px;
+    max-width: 1200px;
+  }
+  
+  .nameTitle {
+    font-size: 2.8rem;
+  }
+  
+  .profileImage {
+    width: 400px;
+    height: 580px;
+  }
+  
+  .statsContainer {
+    gap: 25px;
+  }
+}
+
+/* 1050px - 1150px */
+@media (max-width: 1150px) and (min-width: 1050px) {
+  .aboutContent {
+    gap: 80px;
+    max-width: 1100px;
+  }
+  
+  .nameTitle {
+    font-size: 2.6rem;
+  }
+  
+  .profileImage {
+    width: 380px;
+    height: 550px;
+  }
+  
+  .contentCard,
+  .quoteCard {
+    padding: 35px;
+  }
+  
+  .statsContainer {
+    gap: 20px;
+  }
+  
+  .statItem {
+    min-width: 120px;
+    padding: 25px 20px;
+  }
+}
+
+/* 950px - 1050px */
+@media (max-width: 1050px) and (min-width: 950px) {
+  .aboutContent {
+    gap: 60px;
+    max-width: 1000px;
+  }
+  
+  .nameTitle {
+    font-size: 2.4rem;
+  }
+  
+  .professionalTitle {
+    font-size: 1.3rem;
+  }
+  
+  .profileImage {
+    width: 350px;
+    height: 520px;
+  }
+  
+  .quote {
+    font-size: 1.2rem;
+  }
+  
+  .storyParagraph,
+  .highlightText {
+    font-size: 1.2rem;
+  }
+  
+  .statsContainer {
+    gap: 18px;
+  }
+  
+  .statItem {
+    min-width: 110px;
+    padding: 20px 15px;
+  }
+  
+  .statNumber {
+    font-size: 2.2rem;
+  }
+}
+
+/* 850px - 950px */
+@media (max-width: 950px) and (min-width: 850px) {
+  .aboutContainer {
+    padding: 60px 0;
+  }
+  
+  .aboutContent {
+    gap: 50px;
+    max-width: 900px;
+    padding: 0 30px;
+  }
+  
+  .nameTitle {
+    font-size: 2.2rem;
+  }
+  
+  .professionalTitle {
+    font-size: 1.2rem;
+  }
+  
+  .profileImage {
+    width: 320px;
+    height: 480px;
+  }
+  
+  .contentCard,
+  .quoteCard {
+    padding: 30px;
+  }
+  
+  .quote {
+    font-size: 1.15rem;
+  }
+  
+  .storyParagraph,
+  .highlightText {
+    font-size: 1.15rem;
+  }
+  
+  .statsContainer {
+    gap: 15px;
+  }
+  
+  .statItem {
+    min-width: 100px;
+    padding: 18px 12px;
+  }
+  
+  .statNumber {
+    font-size: 2rem;
+  }
+  
+  .statLabel {
+    font-size: 0.9rem;
+  }
+  
+  .whatsappButton {
+    padding: 16px 32px;
+    font-size: 1rem;
+  }
+  
+  .decorativeElement1,
+  .decorativeElement2 {
+    opacity: 0.5;
+  }
+}
+
+/* 750px - 850px */
+@media (max-width: 850px) and (min-width: 750px) {
+  .aboutContainer {
+    padding: 50px 0;
+  }
+  
+  .aboutContent {
+    flex-direction: column-reverse;
+    gap: 40px;
+    padding: 0 25px;
+    align-items: center;
+    min-height: auto;
+  }
+  
+  .contentSide,
+  .visualSide {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  
+  .nameTitle {
+    font-size: 2.1rem;
+    text-align: center;
+  }
+  
+  .professionalTitle {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .profileImage {
+    width: 350px;
+    height: 450px;
+  }
+  
+  .contentCard,
+  .quoteCard {
+    padding: 25px;
+    text-align: center;
+  }
+  
+  .quote {
+    font-size: 1.1rem;
+  }
+  
+  .storyParagraph,
+  .highlightText {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .statsContainer {
+    gap: 15px;
+  }
+  
+  .statItem {
+    min-width: 110px;
+    padding: 20px 15px;
+  }
+  
+  .statNumber {
+    font-size: 2rem;
+  }
+  
+  .whatsappButton {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+  }
+  
+  .decorativeElement1,
+  .decorativeElement2 {
+    display: none;
+  }
+}
+
+/* 650px - 750px */
+@media (max-width: 750px) and (min-width: 650px) {
+  .aboutContainer {
+    padding: 40px 0;
+  }
+  
+  .aboutContent {
+    flex-direction: column-reverse;
+    gap: 35px;
+    padding: 0 20px;
+    align-items: center;
+    min-height: auto;
+  }
+  
+  .contentSide,
+  .visualSide {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    min-height: auto;
+    padding: 0;
+  }
+  
+  .nameTitle {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .professionalTitle {
+    text-align: center;
+    font-size: 1.15rem;
+  }
+  
+  .profileImage {
+    width: 320px;
+    height: 420px;
+  }
+  
+  .contentCard,
+  .quoteCard {
+    padding: 22px;
+    text-align: center;
+  }
+  
+  .quote {
+    font-size: 1.05rem;
+  }
+  
+  .storyParagraph,
+  .highlightText {
+    font-size: 1.05rem;
+    text-align: center;
+  }
+  
+  .statsContainer {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .statItem {
+    min-width: 100px;
+    padding: 18px 14px;
+  }
+  
+  .statNumber {
+    font-size: 1.8rem;
+  }
+  
+  .statLabel {
+    font-size: 0.9rem;
+  }
+  
+  .whatsappButton {
+    padding: 16px 36px;
+    font-size: 1rem;
+  }
+}
+
+/* 550px - 650px */
+@media (max-width: 650px) and (min-width: 550px) {
+  .aboutContainer {
+    padding: 35px 0;
+  }
+  
+  .aboutContent {
+    flex-direction: column-reverse;
+    gap: 30px;
+    padding: 0 18px;
+    align-items: center;
+    min-height: auto;
+  }
+  
+  .nameTitle {
+    font-size: 1.9rem;
+    text-align: center;
+  }
+  
+  .professionalTitle {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .profileImage {
+    width: 300px;
+    height: 390px;
+  }
+  
+  .contentCard,
+  .quoteCard {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .quote {
+    font-size: 1rem;
+  }
+  
+  .storyParagraph,
+  .highlightText {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .statsContainer {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .statItem {
+    min-width: 90px;
+    padding: 14px 10px;
+  }
+  
+  .statNumber {
+    font-size: 1.7rem;
+  }
+  
+  .statLabel {
+    font-size: 0.85rem;
+  }
+  
+  .whatsappButton {
+    padding: 14px 32px;
+    font-size: 0.95rem;
+    gap: 8px;
+  }
+  
+  .highlightBox {
+    padding: 25px;
+    margin-top: 20px;
+  }
+}
+
+/* 450px - 550px */
+@media (max-width: 550px) and (min-width: 450px) {
+  .aboutContainer {
+    padding: 30px 0;
+  }
+  
+  .aboutContent {
+    flex-direction: column-reverse;
+    gap: 25px;
+    padding: 0 15px;
+    align-items: center;
+    min-height: auto;
+  }
+  
+  .nameTitle {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .professionalTitle {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+  
+  .profileImage {
+    width: 280px;
+    height: 360px;
+  }
+  
+  .contentCard,
+  .quoteCard {
+    padding: 18px;
+    border-radius: 18px;
+    text-align: center;
+  }
+  
+  .quote {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  
+  .storyParagraph,
+  .highlightText {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: center;
+  }
+  
+  .statsContainer {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .statItem {
+    min-width: 85px;
+    padding: 12px 8px;
+  }
+  
+  .statNumber {
+    font-size: 1.6rem;
+  }
+  
+  .statLabel {
+    font-size: 0.8rem;
+  }
+  
+  .whatsappButton {
+    padding: 12px 28px;
+    font-size: 0.9rem;
+    gap: 6px;
+  }
+  
+  .highlightBox {
+    padding: 20px;
+    margin-top: 18px;
+    border-radius: 16px;
+  }
+}
+
+/* 350px - 450px */
+@media (max-width: 450px) and (min-width: 350px) {
+  .aboutContainer {
+    padding: 25px 0;
+  }
+  
+  .aboutContent {
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding: 0 12px;
+    align-items: center;
+    min-height: auto;
+  }
+  
+  .nameTitle {
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+  
+  .professionalTitle {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .profileImage {
+    width: 280px;
+    height:auto
+  }
+  
+  .contentCard,
+  .quoteCard {
+    padding: 15px;
+    border-radius: 16px;
+    text-align: center;
+  }
+  
+  .quote {
+    font-size: 1.1rem;
+    width:90%;
+    margin:3% auto;
+    line-height: 1.2;
+  }
+  
+  .storyParagraph,
+  .highlightText {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  .statsContainer {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .statItem {
+    min-width: 80px;
+    padding: 10px 6px;
+    border-radius: 16px;
+  }
+  
+  .statNumber {
+    font-size: 1.5rem;
+  }
+  
+  .statLabel {
+    font-size: 0.8rem;
+  }
+  
+  .whatsappButton {
+    padding: 10px 24px;
+    font-size: 0.85rem;
+    gap: 4px;
+  }
+  
+  .highlightBox {
+    padding: 18px;
+    margin-top: 15px;
+    border-radius: 14px;
+  }
+  
+  .nameSection {
+    margin-bottom: 30px;
+  }
+  
+  .quoteCard {
+    margin-bottom: 15px;
+  }
+}
+
+/* מתחת ל-350px - מכשירים קטנים מאוד */
+@media (max-width: 350px) {
+  .aboutContainer {
+    padding: 20px 0;
+  }
+  
+  .aboutContent {
+    flex-direction: column-reverse;
+    gap: 15px;
+    padding: 0 10px;
+    align-items: center;
+    min-height: auto;
+  }
+  
+  .nameTitle {
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 1.3;
+  }
+  
+  .professionalTitle {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .profileImage {
+    width: 240px;
+    height: 300px;
+  }
+  
+  .contentCard,
+  .quoteCard {
+    padding: 12px;
+    border-radius: 14px;
+    text-align: center;
+  }
+  
+  .quote {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  
+  .storyParagraph,
+  .highlightText {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .statsContainer {
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .statItem {
+    min-width: 75px;
+    padding: 8px 5px;
+    border-radius: 14px;
+  }
+  
+  .statNumber {
+    font-size: 1.4rem;
+  }
+  
+  .statLabel {
+    font-size: 0.7rem;
+  }
+  
+  .whatsappButton {
+    padding: 8px 20px;
+    font-size: 0.8rem;
+    gap: 3px;
+    border-radius: 30px;
+  }
+  
+  .highlightBox {
+    padding: 15px;
+    margin-top: 12px;
+    border-radius: 12px;
+  }
+  
+  .nameSection {
+    margin-bottom: 25px;
+  }
+  
+  .quoteCard {
+    margin-bottom: 12px;
+  }
+  
+  .storySection {
+    gap: 20px;
+  }
+  
+  .ctaSection {
+    margin-top: 15px;
+  }
+  
+  /* הסתרת אלמנטים דקורטיביים במכשירים קטנים */
+  .decorativeElement1,
+  .decorativeElement2 {
+    display: none;
+  }
+  
+  /* הקטנת מרווחים נוספים */
+  .visualSide {
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .quoteMark {
+    top: 10px;
+    right: 15px;
+  }
+  
+  .quoteMark::before {
+    font-size: 40px;
+    top: -5px;
+  }
+}

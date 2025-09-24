@@ -1,0 +1,90 @@
+.center {
+  display: flex;
+  justify-content: center;
+  margin: 2% auto;
+}
+
+.button {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(18, 66, 73, 0.8) 0%,
+    rgba(18, 66, 73, 0.75) 50%,
+    rgba(18, 66, 73, 0.75) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.95);
+  padding: 16px 36px;
+  font-size: 1.15rem;
+  font-family: "Assistant", sans-serif;
+  direction: rtl;
+  border-radius: 0.85rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  box-shadow: 
+    0 8px 32px 0 rgba(18, 66, 73, 0.37),
+    0 4px 16px 0 rgba(18, 66, 73, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05),
+    inset 0 0 10px rgba(255, 255, 255, 0.08),
+    0 2px 4px 0 rgba(18, 66, 73, 0.1);
+  font-weight: 500;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, 
+     rgba(18, 66, 73, 0.6) 0%,
+    rgba(18, 66, 73, 0.65) 50%,
+    rgba(18, 66, 73, 0.65) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 
+    0 12px 40px 0 rgba(18, 66, 73, 0.45),
+    0 6px 20px 0 rgba(18, 66, 73, 0.25),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 15px rgba(255, 255, 255, 0.12),
+    0 4px 8px 0 rgba(18, 66, 73, 0.15);
+}
+
+.button:active {
+  transform: translateY(1px);
+  background: linear-gradient(135deg, 
+    rgba(18, 66, 73, 0.75) 0%,
+    rgba(18, 66, 73, 0.75) 50%,
+    rgba(18, 66, 73, 0.75) 100%);
+  box-shadow: 
+    0 6px 20px 0 rgba(18, 66, 73, 0.35),
+    0 2px 8px 0 rgba(18, 66, 73, 0.2),
+    inset 0 2px 5px rgba(18, 66, 73, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.06);
+}
+
+/* שיפור אנימציית הברק */
+.shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 75%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  animation: shine 8s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% {
+    transform: translate(-100%, -100%) rotate(25deg);
+  }
+  100% {
+    transform: translate(100%, 100%) rotate(25deg);
+  }
+}
