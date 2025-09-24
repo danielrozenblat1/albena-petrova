@@ -525,7 +525,7 @@
   .image {
     height: 340px;
     max-width: 95%;
-    margin-top: 15px;
+    margin-top: 0;
   }
 
   .carouselContainer {
