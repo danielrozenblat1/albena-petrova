@@ -474,7 +474,7 @@
   }
 
   .hero {
-    min-height: 92vh;
+
     padding: 12px;
   }
 
@@ -525,7 +525,7 @@
   .image {
     height: 340px;
     max-width: 95%;
-    margin-top: 0;
+    margin-top: 10px;
   }
 
   .carouselContainer {
