@@ -18,7 +18,6 @@ import result8 from "../images/אלבנה פטרובה תוצאות 8.png";
 import result9 from "../images/אלבנה פטרובה תוצאות 9.png";
 import result10 from "../images/אלבנה פטרובה תוצאות 10.png";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 const HeroSection = () => {
@@ -140,6 +139,23 @@ const HeroSection = () => {
     setImageLoaded(true);
   };
 
+  // אם התמונה לא נטענה עדיין, הצג רק את הלואדר
+  if (!imageLoaded) {
+    return (
+      <>
+        <LoadingEffect />
+        {/* תמונה נסתרת לטעינה */}
+        <img
+          src={inbar}
+          alt="אלבנה פטרובה"
+          onLoad={handleImageLoad}
+          style={{ display: 'none' }}
+        />
+      </>
+    );
+  }
+
+  // אם התמונה נטענה, הצג את כל הקומפוננטה
   return (
     <>
       <div className={styles.preHeader} ref={preHeaderRef}>
@@ -171,16 +187,10 @@ const HeroSection = () => {
           </div>
 
           <div className={styles.imageWrapper} ref={imageRef}>
-            {!imageLoaded && <LoadingEffect/>}
-            
-            
-            
             <img
               src={inbar}
               alt="אלבנה פטרובה"
               className={styles.image}
-              onLoad={handleImageLoad}
-              style={{ opacity: imageLoaded ? 1 : 0 }}
             />
           </div>
         </div>
